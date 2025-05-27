@@ -3,7 +3,7 @@ title: Ahad L. Amdani
 timezone: America/Chicago
 collections:
   entries:
-    title: Posts
+    title: Entries
     output: true
   posts:
     title: Posts
