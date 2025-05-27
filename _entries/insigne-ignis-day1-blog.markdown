@@ -1,3 +1,19 @@
+---
+title: insigne ignis, day 1.
+date: 2025-05-27 11:50:00 -05:00
+tags:
+- insigne ignis
+- intro
+- day 1
+- godot
+- c#
+- video games
+- game design
+- game development
+- status update
+layout: entry
+---
+
 # Building a Tactical RPG in Godot
 *Day 1 of the Insigne Ignis Development Blog*
 
