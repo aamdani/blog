@@ -1,10 +1,10 @@
 ---
-title: Entries
+title: Dev Log Entries
 permalink: "/entries/"
 layout: page
 ---
 
-# Dev Log Entries
+# In Descending Order
 
 {% for entry in site.entries %}
 <article class="entry-item">
