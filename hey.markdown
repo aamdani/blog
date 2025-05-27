@@ -1,8 +1,8 @@
 ---
-title: Welcome.
+title: hey!
 date: 2024-11-30 01:19:00 -06:00
 ---
 
-Hey, Ahad L. Amdani here. I'm just a guy who likes to build things, focusing on game development more recently.
+Hey! I'm Ahad, and this is my dev log.
 
-You can check out my [about.me](http://about.me/ahad.amdani) for social links and contact information.
+Currently, I'm building a 2.5D Tactical RPG in Godot with C#, while working on Ruby on Rails products (now, *enhanced* with AI) for my day job and side businesses. I've also got a few LLM prompt-driven side projects I'm working on, editly and upoll, and those leverage replit with Typescript/React/Tailwind/ShadCN.
