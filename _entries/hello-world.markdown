@@ -1,6 +1,7 @@
 ---
 title: hello, world.
 date: 2025-05-26 19:49:00 -05:00
+layout: entry
 tags:
 - hello
 - intro

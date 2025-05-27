@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<article class="entry">
+    <header class="entry-header">
+        <h1 class="entry-title">{{ page.title }}</h1>
+        
+        <div class="entry-meta">
+            <time class="entry-date" datetime="{{ page.date | date_to_xmlschema }}">
+                <span class="meta-label">Published:</span>
+                {{ page.date | date: '%B %d, %Y at %I:%M %p' }}
+            </time>
+            
+            {% if page.tags and page.tags.size > 0 %}
+            <div class="entry-tags">
+                <span class="meta-label">Tags:</span>
+                {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </header>
+    
+    <div class="entry-content">
+        {{ content }}
+    </div>
+    
+    <footer class="entry-footer">
+        <nav class="entry-nav">
+            {% if page.collection %}
+                {% assign collection = site[page.collection] | sort: 'date' %}
+                {% assign current_index = collection | map: 'url' | indexOf: page.url %}
+                
+                {% if current_index > 0 %}
+                    {% assign prev_entry = collection[current_index | minus: 1] %}
+                    <a href="{{ prev_entry.url | relative_url }}" class="nav-prev">
+                        ← {{ prev_entry.title }}
+                    </a>
+                {% endif %}
+                
+                {% assign next_index = current_index | plus: 1 %}
+                {% if next_index < collection.size %}
+                    {% assign next_entry = collection[next_index] %}
+                    <a href="{{ next_entry.url | relative_url }}" class="nav-next">
+                        {{ next_entry.title }} →
+                    </a>
+                {% endif %}
+            {% endif %}
+        </nav>
+        
+        <div class="back-to-index">
+            <a href="{{ '/entries/' | relative_url }}">← Back to all entries</a>
+        </div>
+    </footer>
+</article>
