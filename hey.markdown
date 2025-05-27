@@ -1,7 +1,7 @@
 ---
 title: Ahad's Dev Log
-layout: page
 date: 2024-11-30 01:19:00 -06:00
+layout: page
 ---
 
 Hey! I'm Ahad, and this is my dev log.

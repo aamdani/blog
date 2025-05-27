@@ -1,7 +1,7 @@
 ---
 title: Entries
+permalink: "/entries/"
 layout: page
-permalink: /entries/
 ---
 
 # Dev Log Entries

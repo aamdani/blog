@@ -1,7 +1,7 @@
 ---
 title: Posts
+permalink: "/posts/"
 layout: page
-permalink: /posts/
 ---
 
 # Blog Posts
