@@ -20,7 +20,7 @@ layout: entry
 
 So I'm building a documentation platform. Yeah, I know what you're thinking - "Another one? Don't we have enough of these already?" And you'd be right. So what? We all need to make money somehow.
 
-Also, one crucial detail hit me recently, last week actually, while watching my AI coding assistant absolutely *butcher* an API integration. Let's be honest, I was vibe coding because I was lazy, and I had to go do it manually. And that annoyed me enough to have an epiphany and offer a solution that I could hopefully make money from and also hopefully improve developers' lives (convenience? time?).
+Also, one crucial detail hit me recently, last week actually, while watching my AI coding assistant absolutely *butcher* an API integration. Let's be honest, I was vibe coding because I was lazy, and I had to go do it manually. And that annoyed me enough to have an epiphany and offer a solution that I could potentially make money from and also hopefully improve developers' lives (convenience? time?).
 
 The problem isn't that we need more documentation platforms. The problem is that our documentation was built for a world that no longer exists - a world where only humans read docs. We need better docs for agentic AI.
 
