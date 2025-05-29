@@ -6,7 +6,7 @@ layout: page
 
 # In Descending Order
 
-{% for entry in site.entries %}
+{% for entry in site.entries | sort: 'date' | reverse %}
 <article class="entry-item">
     <h2 class="entry-title">
         <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
