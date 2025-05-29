@@ -23,11 +23,12 @@ layout: page
 </article>
 {% endfor %}
 
+{% assign total_entries = sorted_entries | size %}
+{% assign total_pages = total_entries | divided_by: 10.0 | ceil %}
+
+{% if total_pages > 1 %}
 <!-- Pagination -->
 <div class="pagination">
-  {% assign total_entries = sorted_entries | size %}
-  {% assign total_pages = total_entries | divided_by: 10.0 | ceil %}
-
   <!-- First page link -->
   {% if page_num > 1 %}
   <a href="{{ '/entries/' | relative_url }}" class="pagination-item">1</a>
@@ -71,3 +72,4 @@ layout: page
         {% endif %}
         {% endif %}
 </div>
+{% endif %}

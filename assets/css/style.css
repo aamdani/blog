@@ -388,15 +388,20 @@ pre code {
     justify-content: center;
     gap: 0.5rem;
     flex-wrap: wrap;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
 }
 
 .pagination a,
 .pagination .current-page,
 .pagination .pagination-ellipsis {
-    display: inline-block;
-    padding: 0.5rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
     font-weight: 500;
     min-width: 2.5rem;
+    height: 2.5rem;
 }
 
 .pagination a,
@@ -404,16 +409,18 @@ pre code {
     border: 1px solid #ddd;
     border-radius: 4px;
     text-decoration: none;
+    font-family: 'SF Mono', monospace;
 }
 
 .pagination .pagination-ellipsis {
     border: none;
+    color: #666;
 }
 
 .pagination a {
     color: #007acc;
     background-color: white;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .pagination a:hover {
@@ -426,6 +433,7 @@ pre code {
     background-color: #007acc;
     color: white;
     border-color: #007acc;
+    box-shadow: 0 2px 4px rgba(0, 122, 204, 0.2);
 }
 
 @media (max-width: 768px) {

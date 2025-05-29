@@ -1,5 +1,5 @@
 ---
-title: Dev Log Entries
+title: a collection of logs and writings.
 permalink: "/entries/"
 layout: paginated_entries
 pagination_info:
