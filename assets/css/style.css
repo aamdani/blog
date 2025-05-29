@@ -23,7 +23,7 @@ body {
     background-color: #fff;
     border-bottom: 3px solid #007acc;
     padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .site-title {
@@ -144,7 +144,7 @@ body {
 }
 
 .entry-item:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .entry-title {
@@ -172,7 +172,8 @@ body {
 }
 
 /* Code blocks */
-pre, code {
+pre,
+code {
     background-color: #f5f5f5;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -206,25 +207,29 @@ pre code {
 }
 
 /* Entry and Post layouts */
-.entry, .post {
+.entry,
+.post {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.entry-header, .post-header {
+.entry-header,
+.post-header {
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
     border-bottom: 3px solid #007acc;
 }
 
-.entry-title, .post-title {
+.entry-title,
+.post-title {
     font-size: 2.5rem;
     color: #007acc;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
-.entry-meta, .post-meta {
+.entry-meta,
+.post-meta {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -237,11 +242,13 @@ pre code {
     color: #333;
 }
 
-.entry-date, .post-date {
+.entry-date,
+.post-date {
     font-family: 'SF Mono', monospace;
 }
 
-.entry-tags, .post-tags {
+.entry-tags,
+.post-tags {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -258,38 +265,48 @@ pre code {
     border: 1px solid #cce7ff;
 }
 
-.entry-content, .post-content {
+.entry-content,
+.post-content {
     line-height: 1.8;
     font-size: 1.1rem;
     margin-bottom: 3rem;
 }
 
-.entry-content h1, .entry-content h2, .entry-content h3,
-.post-content h1, .post-content h2, .post-content h3 {
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.post-content h1,
+.post-content h2,
+.post-content h3 {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
     color: #007acc;
 }
 
-.entry-content h1, .post-content h1 {
+.entry-content h1,
+.post-content h1 {
     font-size: 1.8rem;
     border-bottom: 2px solid #eee;
     padding-bottom: 0.5rem;
 }
 
-.entry-content h2, .post-content h2 {
+.entry-content h2,
+.post-content h2 {
     font-size: 1.4rem;
 }
 
-.entry-content h3, .post-content h3 {
+.entry-content h3,
+.post-content h3 {
     font-size: 1.2rem;
 }
 
-.entry-content p, .post-content p {
+.entry-content p,
+.post-content p {
     margin-bottom: 1.2rem;
 }
 
-.entry-content blockquote, .post-content blockquote {
+.entry-content blockquote,
+.post-content blockquote {
     border-left: 4px solid #007acc;
     margin: 1.5rem 0;
     padding: 1rem 1.5rem;
@@ -297,31 +314,37 @@ pre code {
     font-style: italic;
 }
 
-.entry-content ul, .entry-content ol,
-.post-content ul, .post-content ol {
+.entry-content ul,
+.entry-content ol,
+.post-content ul,
+.post-content ol {
     margin: 1rem 0;
     padding-left: 2rem;
 }
 
-.entry-content li, .post-content li {
+.entry-content li,
+.post-content li {
     margin-bottom: 0.5rem;
 }
 
 /* Entry/Post footer and navigation */
-.entry-footer, .post-footer {
+.entry-footer,
+.post-footer {
     border-top: 2px solid #eee;
     padding-top: 2rem;
     margin-top: 3rem;
 }
 
-.entry-nav, .post-nav {
+.entry-nav,
+.post-nav {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.5rem;
     gap: 1rem;
 }
 
-.nav-prev, .nav-next {
+.nav-prev,
+.nav-next {
     color: #007acc;
     text-decoration: none;
     padding: 0.8rem 1.2rem;
@@ -333,7 +356,8 @@ pre code {
     text-align: center;
 }
 
-.nav-prev:hover, .nav-next:hover {
+.nav-prev:hover,
+.nav-next:hover {
     background-color: #007acc;
     color: white;
 }
@@ -356,31 +380,87 @@ pre code {
     background-color: #f8fbff;
 }
 
-/* Responsive design */
+/* Pagination */
+.pagination {
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pagination a,
+.pagination .current-page,
+.pagination .pagination-ellipsis {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    min-width: 2.5rem;
+}
+
+.pagination a,
+.pagination .current-page {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.pagination .pagination-ellipsis {
+    border: none;
+}
+
+.pagination a {
+    color: #007acc;
+    background-color: white;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pagination a:hover {
+    background-color: #007acc;
+    color: white;
+    border-color: #007acc;
+}
+
+.pagination .current-page {
+    background-color: #007acc;
+    color: white;
+    border-color: #007acc;
+}
+
 @media (max-width: 768px) {
     .nav-list {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
-    .page-title, .entry-title, .post-title {
+
+    .page-title,
+    .entry-title,
+    .post-title {
         font-size: 2rem;
     }
-    
+
     .container {
         padding: 0 15px;
     }
-    
-    .entry-meta, .post-meta {
+
+    .entry-meta,
+    .post-meta {
         font-size: 0.8rem;
     }
-    
-    .entry-nav, .post-nav {
+
+    .entry-nav,
+    .post-nav {
         flex-direction: column;
     }
-    
-    .entry-tags, .post-tags {
+
+    .entry-tags,
+    .post-tags {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
     }
 }
