@@ -1,5 +1,5 @@
 ---
-title: g8n.ai, day 1 - why your documentation needs to speak both human and robot.
+title: g8n.ai, day 1.
 date: 2025-05-28 10:25:00 -05:00
 tags:
 - documentation
