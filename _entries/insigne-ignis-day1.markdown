@@ -1,5 +1,5 @@
 ---
-title: insigne ignis, day 1 - building a tactical rpg in godot.
+title: insigne ignis, day 1.
 date: 2025-05-27 11:50:00 -05:00
 tags:
 - insigne ignis
