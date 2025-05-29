@@ -59,7 +59,7 @@ layout: page
 
       <!-- Ellipsis before last page if needed -->
       {% assign page_to = page_num | plus: 2 %}
-      {% if page_to < total_pages | minus: 1 %} <span class="pagination-ellipsis">...</span>
+      {% if page_to < (total_pages | minus: 1) %} <span class="pagination-ellipsis">...</span>
         {% endif %}
 
         <!-- Last page link -->
