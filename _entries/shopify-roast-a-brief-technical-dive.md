@@ -1,6 +1,6 @@
 ---
 title: shopify roast - a brief technical dive
-date: 2025-05-30 04:05:00 -05:00
+date: 2025-05-30 17:07:00 -05:00
 tags:
 - shopify
 - roast
@@ -54,6 +54,7 @@ my_workflow/
 
 ### 3. Prompt Files (`prompt.md`)
 
+{% raw %}
 ```markdown
 # analyze_security/prompt.md
 Analyze this code for security vulnerabilities:
@@ -65,6 +66,7 @@ Focus on:
 - XSS vulnerabilities
 - Authentication bypasses
 ```
+{% endraw %}
 
 ## Execution Examples
 
@@ -95,6 +97,7 @@ steps:
 ```
 
 **Conditional Steps:**
+{% raw %}
 ```yaml
 steps:
   - analyze_file
@@ -103,8 +106,10 @@ steps:
   - unless: "{{file_size}} < 1000"
     then: large_file_analysis
 ```
+{% endraw %}
 
 **Iterative Steps:**
+{% raw %}
 ```yaml
 steps:
   - each: "{{files}}"
@@ -112,16 +117,19 @@ steps:
   - repeat: 3
     do: retry_api_call
 ```
+{% endraw %}
 
 ## Key Technical Features
 
 ### 1. Context Interpolation
 
 Variables available in prompts:
+{% raw %}
 - `{{file_content}}` - Current file content
 - `{{file_path}}` - File path
 - `{{file_extension}}` - File extension
 - `{{previous_step_output}}` - Output from prior steps
+{% endraw %}
 
 ### 2. Output Templates (`output.txt`)
 
@@ -179,6 +187,7 @@ steps:
 
 ### Step 1: Extract Functions
 
+{% raw %}
 ```markdown
 # extract_functions/prompt.md
 Extract all function definitions from this code:
@@ -191,9 +200,11 @@ Return a JSON array of functions with their:
 - parameter_count
 - complexity_estimate (1-10)
 ```
+{% endraw %}
 
 ### Step 2: Assess Complexity
 
+{% raw %}
 ```markdown
 # assess_complexity/prompt.md
 Based on these functions: {{previous_step_output}}
@@ -201,6 +212,7 @@ Based on these functions: {{previous_step_output}}
 Identify functions with complexity > 7 and explain why they're complex.
 Suggest specific refactoring approaches.
 ```
+{% endraw %}
 
 ## Execution Flow
 
