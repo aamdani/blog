@@ -1,16 +1,5 @@
 ---
-title: shopify roast: a no-nonsense technical dive
-date: 2025-05-30 03:26:00 -05:00
-tags:
-- shopify
-- roast
-- technical dive
-- ruby
-- rails
-- ai
-- software design
-- software development
-layout: entry
+title: Shopify Roast Technical Breakdown
 ---
 
 # Shopify Roast: A No-Nonsense Technical Dive
