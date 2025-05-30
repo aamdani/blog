@@ -1,5 +1,7 @@
 ---
 title: Ahad's dev log
+description: Ahad L. Amdani's personal development blog covering software engineering insights, technical deep dives, and project experiences.
+url: https://ahad.dev
 timezone: America/Chicago
 collections:
   entries:
@@ -24,3 +26,8 @@ defaults:
   values:
     layout: page
 permalink: pretty
+
+# SEO and sitemap
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag

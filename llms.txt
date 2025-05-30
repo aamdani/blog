@@ -1,0 +1,20 @@
+# Ahad's Dev Log
+
+## About
+This is Ahad L. Amdani's personal development blog where I share technical insights, project experiences, and thoughts on software engineering.
+
+## Content Areas
+- Software development experiences and learnings
+- Technical deep dives and analysis
+- Project retrospectives and insights
+- Engineering best practices
+
+## Key Content
+- [Entries](/entries/) - Main blog posts and technical articles
+- [Shopify Roast Technical Dive](/entries/shopify-roast-a-brief-technical-dive) - Analysis of Shopify's technical architecture
+
+## Contact
+Find more about me at [ahadamdani.com](https://www.ahadamdani.com)
+
+## Usage Guidelines
+This content is shared for educational and professional development purposes. Please attribute any references appropriately.
