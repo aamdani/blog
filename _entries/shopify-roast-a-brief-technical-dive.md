@@ -1,5 +1,14 @@
 ---
-title: Shopify Roast Technical Breakdown
+title: shopify roast - a brief technical dive
+tags:
+- shopify
+- roast
+- ai
+- technical dive
+- ruby
+- rails
+- software design
+- software development
 ---
 
 # Shopify Roast: A No-Nonsense Technical Dive
@@ -249,5 +258,3 @@ If your team is already in the Ruby ecosystem and you're tired of ad-hoc AI scri
 - Times I Considered Building This Myself: 0
 - Shopify Engineers I'm Now Jealous Of: 6
 - Workflows I Can't Wait To Try: 4
-
----
