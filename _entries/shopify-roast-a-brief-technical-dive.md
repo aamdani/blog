@@ -10,6 +10,7 @@ tags:
 - rails
 - software design
 - software development
+layout: entry
 ---
 
 # Shopify Roast: A No-Nonsense Technical Dive
