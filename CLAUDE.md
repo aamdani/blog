@@ -12,11 +12,14 @@ This is a Jekyll-based personal blog for Ahad L. Amdani hosted at https://ahad.d
 # Install Jekyll (if not already installed)
 gem install jekyll bundler
 
+# Install project dependencies
+bundle install
+
 # Serve the site locally
-jekyll serve
+bundle exec jekyll serve
 
 # Build the site
-jekyll build
+bundle exec jekyll build
 ```
 
 ## Site Structure

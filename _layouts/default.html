@@ -9,37 +9,105 @@
         content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <meta name="author" content="Ahad L. Amdani">
     <meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
-    <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta property="og:description"
+        content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <meta property="og:url" content="{{ page.url | absolute_url }}">
     <meta property="og:type" content="{% if page.layout == 'entry' %}article{% else %}website{% endif %}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
-    <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <meta name="twitter:description"
+        content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
-    <header class="site-header">
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header" role="banner">
         <div class="container">
             <h1 class="site-title">
                 <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
             </h1>
-            {% include navigation.html %}
+            <div class="site-nav">
+                {% include navigation.html %}
+
+                <!-- Theme toggle button -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-toggle-icon light-icon">☀️</span>
+                    <span class="theme-toggle-icon dark-icon" style="display: none;">🌙</span>
+                    <span class="theme-toggle-text">Theme</span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <main class="site-content">
+    <main id="main-content" class="site-content" role="main">
         <div class="container">
             {{ content }}
         </div>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
         <div class="container">
             <p>&copy; {{ 'now' | date: '%Y' }} Ahad L. Amdani. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Dark mode toggle script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const lightIcon = document.querySelector('.light-icon');
+            const darkIcon = document.querySelector('.dark-icon');
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+            // Check for saved theme preference or use system preference
+            const savedTheme = localStorage.getItem('theme');
+
+            // Apply theme based on preference
+            if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+                document.body.classList.add('dark-theme');
+                lightIcon.style.display = 'none';
+                darkIcon.style.display = 'inline-block';
+            } else {
+                document.body.classList.add('light-theme');
+                lightIcon.style.display = 'inline-block';
+                darkIcon.style.display = 'none';
+            }
+
+            // Toggle theme when button is clicked
+            themeToggle.addEventListener('click', function () {
+                if (document.body.classList.contains('dark-theme')) {
+                    document.body.classList.replace('dark-theme', 'light-theme');
+                    localStorage.setItem('theme', 'light');
+                    lightIcon.style.display = 'inline-block';
+                    darkIcon.style.display = 'none';
+                } else {
+                    document.body.classList.replace('light-theme', 'dark-theme');
+                    localStorage.setItem('theme', 'dark');
+                    lightIcon.style.display = 'none';
+                    darkIcon.style.display = 'inline-block';
+                }
+            });
+
+            // Update theme if system preference changes
+            prefersDarkScheme.addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    if (e.matches) {
+                        document.body.classList.replace('light-theme', 'dark-theme');
+                        lightIcon.style.display = 'none';
+                        darkIcon.style.display = 'inline-block';
+                    } else {
+                        document.body.classList.replace('dark-theme', 'light-theme');
+                        lightIcon.style.display = 'inline-block';
+                        darkIcon.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

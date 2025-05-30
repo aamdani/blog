@@ -8,22 +8,24 @@ pagination_info:
 
 # In Descending Order
 
-{% assign sorted_entries = site.entries | sort: 'date' | reverse %}
-{% assign paginated_entries = sorted_entries | slice: 0, 5 %}
+<div class="entry-container">
+  {% assign sorted_entries = site.entries | sort: 'date' | reverse %}
+  {% assign paginated_entries = sorted_entries | slice: 0, 5 %}
 
-{% for entry in paginated_entries %}
-<article class="entry-item">
-    <h2 class="entry-title">
-        <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
-    </h2>
-    <time class="entry-date" datetime="{{ entry.date | date_to_xmlschema }}">
-        {{ entry.date | date: '%B %d, %Y' }}
-    </time>
-    <div class="entry-excerpt">
-        {{ entry.excerpt | strip_html | truncatewords: 30 }}
-    </div>
-</article>
-{% endfor %}
+  {% for entry in paginated_entries %}
+  <article class="entry-item">
+      <h2 class="entry-title">
+          <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
+      </h2>
+      <time class="entry-date" datetime="{{ entry.date | date_to_xmlschema }}">
+          {{ entry.date | date: '%B %d, %Y' }}
+      </time>
+      <div class="entry-excerpt">
+          {{ entry.excerpt | strip_html | truncatewords: 30 }}
+      </div>
+  </article>
+  {% endfor %}
+</div>
 
 <!-- Pagination -->
 <div class="pagination">
@@ -34,7 +36,7 @@ pagination_info:
     {% if forloop.index == 1 %}
       <span class="current-page">{{ page_num }}</span>
     {% else %}
-      <a href="{{ '/entries/page/' | append: page_num | relative_url }}">{{ page_num }}</a>
+      <a href="{{ '/entries/page/' | append: page_num | relative_url }}" aria-label="Page {{ page_num }}">{{ page_num }}</a>
     {% endif %}
   {% endfor %}
 </div>

@@ -4,24 +4,26 @@ layout: page
 
 <h1>In Descending Order</h1>
 
-{% assign sorted_entries = site.entries | sort: 'date' | reverse %}
-{% assign page_num = page.pagination_info.page | default: 1 %}
-{% assign offset = page_num | minus: 1 | times: 10 %}
-{% assign paginated_entries = sorted_entries | slice: offset, 10 %}
+<div class="entry-container">
+  {% assign sorted_entries = site.entries | sort: 'date' | reverse %}
+  {% assign page_num = page.pagination_info.page | default: 1 %}
+  {% assign offset = page_num | minus: 1 | times: 10 %}
+  {% assign paginated_entries = sorted_entries | slice: offset, 10 %}
 
-{% for entry in paginated_entries %}
-<article class="entry-item">
-  <h2 class="entry-title">
-    <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
-  </h2>
-  <time class="entry-date" datetime="{{ entry.date | date_to_xmlschema }}">
-    {{ entry.date | date: '%B %d, %Y' }}
-  </time>
-  <div class="entry-excerpt">
-    {{ entry.excerpt | strip_html | truncatewords: 30 }}
-  </div>
-</article>
-{% endfor %}
+  {% for entry in paginated_entries %}
+  <article class="entry-item">
+    <h2 class="entry-title">
+      <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
+    </h2>
+    <time class="entry-date" datetime="{{ entry.date | date_to_xmlschema }}">
+      {{ entry.date | date: '%B %d, %Y' }}
+    </time>
+    <div class="entry-excerpt">
+      {{ entry.excerpt | strip_html | truncatewords: 30 }}
+    </div>
+  </article>
+  {% endfor %}
+</div>
 
 {% assign total_entries = sorted_entries | size %}
 {% assign total_pages = total_entries | divided_by: 10.0 | ceil %}
@@ -31,15 +33,15 @@ layout: page
 <div class="pagination">
   <!-- First page link -->
   {% if page_num > 1 %}
-  <a href="{{ '/entries/' | relative_url }}" class="pagination-item">1</a>
+  <a href="{{ '/entries/' | relative_url }}" class="pagination-item" aria-label="First page">1</a>
   {% else %}
-  <span class="current-page">1</span>
+  <span class="current-page" aria-current="page">1</span>
   {% endif %}
 
   <!-- Ellipsis after first page if needed -->
   {% assign page_from = page_num | minus: 2 %}
   {% if page_from > 2 %}
-  <span class="pagination-ellipsis">...</span>
+  <span class="pagination-ellipsis" aria-hidden="true">...</span>
   {% endif %}
 
   <!-- Pages around current -->
@@ -49,9 +51,11 @@ layout: page
     {% assign max_page = total_pages | minus: 1 %}
     {% endif %}
 
-    {% if i >= min_page and i <= max_page %} {% if i==page_num %} <span class="current-page">{{ i }}</span>
+    {% if i >= min_page and i <= max_page %} {% if i==page_num %} <span class="current-page" aria-current="page">{{ i
+      }}</span>
       {% else %}
-      <a href="{{ '/entries/page/' | append: i | relative_url }}" class="pagination-item">{{ i }}</a>
+      <a href="{{ '/entries/page/' | append: i | relative_url }}" class="pagination-item" aria-label="Page {{ i }}">{{ i
+        }}</a>
       {% endif %}
       {% endif %}
       {% endif %}
@@ -59,16 +63,17 @@ layout: page
 
       <!-- Ellipsis before last page if needed -->
       {% assign page_to = page_num | plus: 2 %}
-      {% if page_to < (total_pages | minus: 1) %} <span class="pagination-ellipsis">...</span>
+      {% assign last_page_threshold = total_pages | minus: 1 %}
+      {% if page_to < last_page_threshold %} <span class="pagination-ellipsis" aria-hidden="true">...</span>
         {% endif %}
 
         <!-- Last page link -->
         {% if total_pages > 1 %}
         {% if page_num == total_pages %}
-        <span class="current-page">{{ total_pages }}</span>
+        <span class="current-page" aria-current="page">{{ total_pages }}</span>
         {% else %}
-        <a href="{{ '/entries/page/' | append: total_pages | relative_url }}" class="pagination-item">{{ total_pages
-          }}</a>
+        <a href="{{ '/entries/page/' | append: total_pages | relative_url }}" class="pagination-item"
+          aria-label="Last page">{{ total_pages }}</a>
         {% endif %}
         {% endif %}
 </div>
