@@ -1,5 +1,5 @@
 ---
-title: shopify roast: a no-nonsense technical dive
+title: shopify roast - a no-nonsense technical dive
 date: 2025-05-30 03:26:00 -05:00
 tags:
 - shopify
@@ -260,5 +260,3 @@ If your team is already in the Ruby ecosystem and you're tired of ad-hoc AI scri
 - Times I Considered Building This Myself: 0
 - Shopify Engineers I'm Now Jealous Of: 6
 - Workflows I Can't Wait To Try: 4
-
----
