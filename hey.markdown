@@ -4,10 +4,27 @@ date: 2025-05-25 02:19:00 -05:00
 layout: page
 ---
 
-Hey! I'm Ahad, and this is my dev log.
+Hey — I'm Ahad.
 
-Currently, I'm building a 2.5D Tactical RPG in Godot with C#, while working on Ruby on Rails products (now, *enhanced* with AI) for my day job and side businesses. 
+20+ years building software. Full-stack developer, systems thinker, and recovering SaaS addict. I've shipped products across web, mobile, and everything in between — Ruby on Rails, React, Go, C#, you name it.
 
-A fun new project I'm working on is g8n.ai, a Ruby on Rails SaaS document intelligence solution leveraging AI and surfacing docs to agentic AI via MCP. 
+These days I'm focused on one thing: **software sovereignty for founders.**
 
-I've also got a few LLM prompt-driven side projects I'm working on, editly and upoll, and those leverage replit with Typescript/React/Tailwind/ShadCN.
+## what's G8N.AI?
+
+It's my newsletter and podcast at [g8n.ai](https://g8n.ai) — built around a simple premise:
+
+**Own your tools. Don't rent them.**
+
+Most founders are paying thousands a year to rent software they don't control — software that can raise prices, change terms, or disappear overnight. G8N.AI is about changing that. Building your own stack. Leveraging AI to make custom software accessible to small teams. Taking back control of your data, your workflows, and your margins.
+
+If you're a founder who's tired of being at the mercy of SaaS pricing — [subscribe on Substack](https://g8n.substack.com).
+
+## what's this blog?
+
+This is the dev log. The behind-the-scenes.
+
+The newsletter covers the *what* and *why* of software sovereignty. This blog covers the *how* — the technical deep dives, the build-in-public updates, the AI implementation details, the messy parts that are too nerdy for a newsletter but too useful to leave undocumented.
+
+If you want the polished take, go to [g8n.ai](https://g8n.ai).
+If you want the raw build log, you're already here.
