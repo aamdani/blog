@@ -15,7 +15,7 @@ Twenty years of building software will teach you a few things. One of them is th
 
 Not maliciously — just economically. A SaaS company's job is to capture as much value as possible from the software they rent you. Your job, as a founder, is to not let that happen.
 
-That tension is what G8N.AI is about.
+That tension is what G8N•AI is about.
 
 ## the problem
 
@@ -25,21 +25,21 @@ The math is brutal too. Add up what a small team pays across their SaaS stack �
 
 There's a better way.
 
-## what G8N.AI is
+## what G8N•AI is
 
-[G8N.AI](https://g8n.ai) is my newsletter and podcast. The thesis: modern AI tools have made custom software dramatically more accessible. A small team can now build and maintain software that would have required a full engineering team five years ago.
+[G8N•AI](https://g8n.ai) is my newsletter and podcast. The thesis: modern AI tools have made custom software dramatically more accessible. A small team can now build and maintain software that would have required a full engineering team five years ago.
 
 Software sovereignty isn't about writing everything from scratch. It's about knowing when to own vs. rent, and having the knowledge and tools to act on that.
 
 The newsletter covers the *what* and *why* — the strategy, the decisions, the tradeoffs. The podcast goes deeper into specific implementations and conversations with founders who are doing this.
 
-[Subscribe on Substack](https://g8n.substack.com) if that resonates.
+[Follow me on Substack](https://www.substack.com/@ahadamdani) if that resonates, or [subscribe to the newsletter](https://www.g8n.ai/subscribe).
 
 ## what this blog is
 
 This is the dev log. The messy, technical, in-progress stuff.
 
-When I'm building something for G8N.AI — a tool, an integration, an AI pipeline — I'll document it here. Not polished write-ups. Raw build logs. The actual decisions, the dead ends, the architecture choices, the code snippets that are too nerdy for a newsletter.
+When I'm building something for G8N•AI — a tool, an integration, an AI pipeline — I'll document it here. Not polished write-ups. Raw build logs. The actual decisions, the dead ends, the architecture choices, the code snippets that are too nerdy for a newsletter.
 
 If you're a developer or technical founder, this is for you.
 
