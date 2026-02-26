@@ -53,7 +53,7 @@
     }
 }
 
-body.light-theme {
+html.light-theme, body.light-theme {
     --bg-color: #f7f5f0;
     --bg-secondary: #eeecea;
     --text-color: #1c1c1c;
@@ -77,7 +77,7 @@ body.light-theme {
     --accent-shadow: rgba(255, 103, 25, 0.15);
 }
 
-body.dark-theme {
+html.dark-theme, body.dark-theme {
     --bg-color: #111111;
     --bg-secondary: #1a1a1a;
     --text-color: #e8e4db;
