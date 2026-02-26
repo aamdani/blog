@@ -1,20 +1,24 @@
-# Ahad's Dev Log
+# ahad.dev — G8N.AI Dev Log
 
 ## About
-This is Ahad L. Amdani's personal development blog where I share technical insights, project experiences, and thoughts on software engineering.
+This is Ahad L. Amdani's personal development blog and build log for G8N.AI. Ahad has 20+ years of software development experience and is now focused on software sovereignty for founders — helping them own their tools instead of renting expensive SaaS.
+
+## G8N.AI
+G8N.AI is a newsletter and podcast at g8n.ai covering software sovereignty for founders: the strategy, tools, and mindset for owning your stack instead of being at the mercy of SaaS pricing and terms. Subscribe at g8n.substack.com.
 
 ## Content Areas
-- Software development experiences and learnings
-- Technical deep dives and analysis
-- Project retrospectives and insights
-- Engineering best practices
+- Build-in-public dev logs for G8N.AI and related projects
+- Technical deep dives into AI implementation and custom software development
+- Software sovereignty strategy for founders and small teams
+- Architecture decisions, tooling choices, and engineering tradeoffs
 
 ## Key Content
-- [Entries](/entries/) - Main blog posts and technical articles
-- [Shopify Roast Technical Dive](/entries/shopify-roast-a-brief-technical-dive) - Analysis of Shopify's technical architecture
+- [Entries](/entries/) - Dev log entries and technical build posts
+- [Home](/) - Overview of Ahad's focus and G8N.AI
 
 ## Contact
-Find more about me at [ahadamdani.com](https://www.ahadamdani.com)
+- Newsletter and podcast: [g8n.ai](https://g8n.ai)
+- Substack: [g8n.substack.com](https://g8n.substack.com)
 
 ## Usage Guidelines
 This content is shared for educational and professional development purposes. Please attribute any references appropriately.

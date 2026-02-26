@@ -1,5 +1,5 @@
 ---
-title: Ahad's dev log
+title: ahad.dev
 timezone: America/Chicago
 collections:
   entries:
@@ -23,8 +23,7 @@ defaults:
     type: pages
   values:
     layout: page
-description: Ahad L. Amdani's personal development blog covering software engineering
-  insights, technical deep dives, and project experiences.
+description: "Ahad L. Amdani — 20 years building software. Now helping founders own their tools instead of renting them. Building G8N.AI in public."
 url: https://ahad.dev
 permalink: pretty
 plugins:
